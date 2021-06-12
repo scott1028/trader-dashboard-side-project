@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import styled from 'styled-components';
+
+import { OrderBook } from './components/OrderBook';
+
 import './App.css';
+
+const WidgetWrapper = styled.div`
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 300px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WidgetWrapper className="App">
+      <OrderBook />
+    </WidgetWrapper>
   );
 }
 
