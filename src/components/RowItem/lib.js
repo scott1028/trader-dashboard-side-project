@@ -1,4 +1,4 @@
-export const hightStrategy = ({ previousPrice, previousSize, price, size }) => {
+export const highlightStrategy = ({ previousPrice, previousSize, price, size }) => {
   let isPriceHightlight = false;
   let isSizeHightlight = false;
   /*  */ if (price > previousPrice && size >= previousSize) {

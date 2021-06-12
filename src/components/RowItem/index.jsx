@@ -6,7 +6,7 @@ import { Tip } from '../Tip';
 import { FlashTip } from '../FlashTip';
 import { usePrevious } from '../../lib/usePrevious';
 import { SELL_TYPE, BUY_TYPE } from '../../lib';
-import { hightStrategy, disabledStrategy } from './lib';
+import { highlightStrategy, disabledStrategy } from './lib';
 
 export const RowItem = memo(({ item, hoveredTarget, children }) => {
   const [isToggle, setToggle] = useState(false);
@@ -18,7 +18,7 @@ export const RowItem = memo(({ item, hoveredTarget, children }) => {
   const {
     isPriceHightlight: isRowHightlight,
     isSizeHightlight: isCellHightlight,
-  } = hightStrategy({
+  } = highlightStrategy({
     previousPrice, previousSize, price, size,
   });
   return (
